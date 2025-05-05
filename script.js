@@ -11,3 +11,10 @@ fetch('home.html')
 .then(data => {
     document.getElementById('home').innerHTML = data;
 });
+
+// Load footer
+fetch('footer.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('footer').innerHTML = data;
+});
