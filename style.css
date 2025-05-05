@@ -1,10 +1,15 @@
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
 p {
-    color: #666;
+    color: #363636;
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
-/* home styles */
+/* home page styles */
 .hero {
     padding: 2rem;
     max-width: 1200px;
@@ -14,11 +19,6 @@ p {
 .hero-content {
     text-align: center;
     margin-bottom: 3rem;
-}
-
-.hero-content h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 .hero-content p {
@@ -68,11 +68,120 @@ p {
 }
 
 @media (max-width: 768px) {
+    .hero-content p br {
+        display: none;
+    }
+    
     .hero-cards {
         grid-template-columns: 1fr;
     }
     
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 }
+
+/* about page styles */
+.about-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content > p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: left;
+}
+
+.feature {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    margin-bottom: 1rem;
+}
+
+.team-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 2rem;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 1rem 0;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
