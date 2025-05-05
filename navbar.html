@@ -1,0 +1,64 @@
+<nav class="navbar">
+    <img src="/assets/logo/logo.png" alt="logo" class="logo">
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 2em;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 4em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+        font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1em;
+        }
+        
+        .nav-links {
+            width: 100%;
+            margin-top: 1em;
+            justify-content: center;
+            gap: 2em;
+            padding: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+</style>
