@@ -86,15 +86,18 @@ p {
 }
 
 .slider-controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+    position: static;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    pointer-events: auto;
     z-index: 10;
+    transform: none;
+    height: auto;
+    padding: 0;
 }
 
 .slider-prev,
@@ -111,11 +114,13 @@ p {
     justify-content: center;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
+    position: static;
+    margin: 0;
 }
 
 .slider-prev:hover,
 .slider-next:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: #333;
 }
 
 @media (max-width: 900px) {
@@ -140,6 +145,12 @@ p {
     }
     .hero-card img {
         height: 120px;
+    }
+    .slider-prev,
+    .slider-next {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
     }
 }
 

@@ -117,7 +117,8 @@ function initSlider() {
 
     controls.appendChild(prev);
     controls.appendChild(next);
-    slider.parentElement.appendChild(controls);
+    // place controls after the slider, not as a child
+    slider.parentElement.insertBefore(controls, slider.nextSibling);
 
     function showCards() {
         cards.forEach((card, i) => {
